@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docker:build-api": "docker build -t api-service ./backend",
+    "docker:build-app": "docker build -t app-service ./app",
+    "compose:up": "docker compose up -d",
+    "compose:down": "docker compose down",
+    "compose:logs": "docker compose logs -f",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
